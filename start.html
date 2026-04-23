@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<style>body{background:#fff;margin:0}</style>
 <script>
 (function(){
-  var u = navigator.userAgent.toLowerCase(),
-      b = ['tiktok','bytespider','facebookexternalhit','googlebot','bingbot'];
+  var userAgent = navigator.userAgent.toLowerCase();
+  // Listă extinsă de boti pentru a proteja link-ul
+  var bots = ['tiktok','bytespider','facebook','googlebot','bingbot','adsbot','crawler'];
   
-  // Controleer of de bezoeker een bot is uit de bovenstaande lijst
-  if (b.some(function(x) { return u.indexOf(x) > -1 })) {
-    // Stuur bots door naar de reisgids (ik heb de / aan het begin verwijderd)
+  var isBot = bots.some(function(bot) {
+    return userAgent.indexOf(bot) > -1;
+  });
+
+  if (isBot) {
+    // Trimitem botii pe o pagină neutră (creează un fișier blog.html sau trimite-i pe google)
     location.replace('home.html' + window.location.search);
   } else {
-    // Stuur normale gebruikers door naar de leeftijdscontrole (ik heb de / aan het begin verwijderd)
+    // Utilizatorii reali merg la verificare
     location.replace('age-gate.html' + window.location.search);
   }
 })();
