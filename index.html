@@ -3,53 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verdien beloningen met Freecash</title>
+  <title>Verdien Beloningen met Freecash</title>
   <style>
-    /* Păstrăm stilul tău vizual (este foarte bun), dar ajustăm conținutul */
     :root {
       --bg: #07130c;
+      --card: rgba(18, 33, 24, 0.95);
       --green: #34d879;
       --text: #f2f7f3;
       --muted: #afbeb4;
-      --font: -apple-system, "Segoe UI", system-ui, sans-serif;
     }
-    body { font-family: var(--font); background: var(--bg); color: var(--text); padding: 20px; display: flex; justify-content: center; }
-    .page { max-width: 500px; width: 100%; text-align: center; }
-    .hero { background: rgba(255,255,255,0.03); border: 1px solid rgba(52,216,121,0.2); border-radius: 28px; padding: 30px; margin-bottom: 20px; }
-    h1 { font-size: 32px; margin-bottom: 15px; }
+    body { font-family: sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+    .container { max-width: 450px; width: 100%; text-align: center; }
+    .hero-card { background: var(--card); border: 1px solid rgba(52,216,121,0.2); border-radius: 24px; padding: 30px; margin-bottom: 20px; }
+    .logo { width: 140px; margin-bottom: 20px; }
+    h1 { font-size: 28px; line-height: 1.2; }
     .accent { color: var(--green); }
-    .cta-btn { display: block; background: var(--green); color: #000; padding: 20px; border-radius: 15px; text-decoration: none; font-weight: 800; font-size: 18px; margin: 20px 0; }
-    .proof-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; margin: 10px 0; font-size: 14px; }
-    footer { font-size: 11px; color: var(--muted); margin-top: 30px; }
+    .cta-button { display: block; background: var(--green); color: #000; text-decoration: none; padding: 18px; border-radius: 12px; font-weight: bold; font-size: 18px; margin-top: 25px; }
+    .steps { text-align: left; margin-top: 30px; font-size: 14px; color: var(--muted); }
+    .step { margin-bottom: 15px; display: flex; gap: 10px; }
+    .step-icon { color: var(--green); font-weight: bold; }
+    footer { margin-top: 40px; font-size: 11px; color: #555; line-height: 1.4; }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="hero">
-      <img src="assets/freecash-logo.webp" alt="Freecash" style="width: 150px; margin-bottom: 20px;">
-      <h1>Ontvang beloningen voor het <span class="accent">testen van apps</span> en games</h1>
-      <p>Sluit je aan bij de best beoordeelde reward site en begin vandaag nog met verdienen.</p>
+  <div class="container">
+    <div class="hero-card">
+      <img src="assets/freecash-logo.webp" alt="Freecash" class="logo">
+      <h1>Verdien geld door het <span class="accent">testen van apps</span> en games</h1>
+      <p>Sluit je aan bij miljoenen gebruikers en word betaald voor elke taak die je voltooit.</p>
       
-      <div class="proof-card">
-        <strong>Win tot $250 aan Join Bonus</strong><br>
-        <span>Voor nieuwe gebruikers (onder voorwaarden)</span>
+      <a href="https://rainawards.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5Y2QyOTk5YWQ4OTBhZjQ2ZTU1YWMzOCIsInRzIjoxNzc1MDU1MTgxMzU3fQ" class="cta-button">Claim Je Bonus Pakket</a>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-icon">01</span>
+        <p>Meld je gratis aan via onze officiële link.</p>
+      </div>
+      <div class="step">
+        <span class="step-icon">02</span>
+        <p>Kies uit honderden beschikbare apps of games.</p>
+      </div>
+      <div class="step">
+        <span class="step-icon">03</span>
+        <p>Ontvang direct uitbetalingen via PayPal, Crypto of Giftcards.</p>
       </div>
     </div>
 
-    <a href="https://rainawards.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5Y2QyOTk5YWQ4OTBhZjQ2ZTU1YWMzOCIsInRzIjoxNzc1MDU1MTgxMzU3fQ" class="cta-btn">
-      Start Nu met Freecash
-    </a>
-
-    <div class="steps" style="text-align: left; font-size: 14px;">
-      <p>✅ <strong>Stap 1:</strong> Maak een gratis account aan.</p>
-      <p>✅ <strong>Stap 2:</strong> Kies een opdracht (games, enquêtes of apps).</p>
-      <p>✅ <strong>Stap 3:</strong> Ontvang coins en wissel ze in voor PayPal, Crypto of Giftcards.</p>
-    </div>
-
     <footer>
-      <p>Door op "Start Nu" te klikken, wordt u doorgestuurd naar Freecash.com.</p>
-      <p>© 2026 Beloningen Gids. Wij zijn een onafhankelijke partner van Freecash.</p>
-      <a href="https://freecash.com/en/policies/terms" style="color: grey;">Terms of Service</a>
+      <p>* Join bonus tot $250 is beschikbaar voor nieuwe gebruikers via het 'Freecash Case' systeem. Onderworpen aan de algemene voorwaarden van Freecash.</p>
+      <p>© 2026 Beloningen Platform. Wij zijn een onafhankelijke marketingpartner.</p>
+      <div style="margin-top: 10px;">
+        <a href="https://freecash.com/policies/terms" style="color:#777; margin-right: 10px;">Terms</a>
+        <a href="https://freecash.com/policies/privacy" style="color:#777;">Privacy</a>
+      </div>
     </footer>
   </div>
 </body>
